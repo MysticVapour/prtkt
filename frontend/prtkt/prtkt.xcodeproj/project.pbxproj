@@ -15,7 +15,8 @@
 		B50436472C8AB053007C5389 /* prtktUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50436462C8AB053007C5389 /* prtktUITests.swift */; };
 		B50436492C8AB053007C5389 /* prtktUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50436482C8AB053007C5389 /* prtktUITestsLaunchTests.swift */; };
 		C2433F432C8C4EE500E45C2B /* timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2433F422C8C4EE500E45C2B /* timetable.swift */; };
-		C2433F452C8C508600E45C2B /* Timetable UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2433F442C8C508600E45C2B /* Timetable UI.swift */; };
+		C2433F472C8EBAC400E45C2B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2433F462C8EBAC400E45C2B /* SwiftUIView.swift */; };
+		C2433F4B2C901ED900E45C2B /* TimeTableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2433F4A2C901ED900E45C2B /* TimeTableUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,8 @@
 		B50436462C8AB053007C5389 /* prtktUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prtktUITests.swift; sourceTree = "<group>"; };
 		B50436482C8AB053007C5389 /* prtktUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prtktUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C2433F422C8C4EE500E45C2B /* timetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetable.swift; sourceTree = "<group>"; };
-		C2433F442C8C508600E45C2B /* Timetable UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timetable UI.swift"; sourceTree = "<group>"; };
+		C2433F462C8EBAC400E45C2B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		C2433F4A2C901ED900E45C2B /* TimeTableUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				B504362B2C8AB052007C5389 /* prtktApp.swift */,
-				B504362D2C8AB052007C5389 /* ContentView.swift */,
+				C2433F492C8EC8BF00E45C2B /* Views */,
 				B504362F2C8AB053007C5389 /* Assets.xcassets */,
 				B50436312C8AB053007C5389 /* Preview Content */,
 				C2433F422C8C4EE500E45C2B /* timetable.swift */,
-				C2433F442C8C508600E45C2B /* Timetable UI.swift */,
 			);
 			path = prtkt;
 			sourceTree = "<group>";
@@ -131,6 +132,16 @@
 				B50436482C8AB053007C5389 /* prtktUITestsLaunchTests.swift */,
 			);
 			path = prtktUITests;
+			sourceTree = "<group>";
+		};
+		C2433F492C8EC8BF00E45C2B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C2433F462C8EBAC400E45C2B /* SwiftUIView.swift */,
+				B504362D2C8AB052007C5389 /* ContentView.swift */,
+				C2433F4A2C901ED900E45C2B /* TimeTableUIView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +276,9 @@
 			files = (
 				B504362E2C8AB052007C5389 /* ContentView.swift in Sources */,
 				B504362C2C8AB052007C5389 /* prtktApp.swift in Sources */,
-				C2433F452C8C508600E45C2B /* Timetable UI.swift in Sources */,
+				C2433F4B2C901ED900E45C2B /* TimeTableUIView.swift in Sources */,
 				C2433F432C8C4EE500E45C2B /* timetable.swift in Sources */,
+				C2433F472C8EBAC400E45C2B /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
