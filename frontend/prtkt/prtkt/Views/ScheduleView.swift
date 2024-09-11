@@ -19,12 +19,13 @@ struct DayScheduleView: View {
                     .frame(width: 100, height: 30)
                     .background(Color.white)
                     .cornerRadius(20)
+                
                 Button("+") {
                     isVisible.toggle()
                 }
                 .frame(width: 25, height: 25)
                 .shadow(radius: 5)
-                .foregroundColor(Color.white)
+                .foregroundStyle(Color.white)
                 .background(Color.black)
             }
             if isVisible {
@@ -45,9 +46,7 @@ struct DayScheduleView: View {
     }
 }
 
-struct SwiftUIView: View {
-    
-    
+struct ScheduleView: View {
     @State private var mondayVisible = false
     @State private var tuesdayVisible = false
     @State private var wednesdayVisible = false
@@ -94,6 +93,6 @@ struct SwiftUIView: View {
         
         
 #Preview {
-    SwiftUIView()
+    ScheduleView()
 }
 

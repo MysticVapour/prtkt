@@ -14,11 +14,11 @@
 		B504363D2C8AB053007C5389 /* prtktTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504363C2C8AB053007C5389 /* prtktTests.swift */; };
 		B50436472C8AB053007C5389 /* prtktUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50436462C8AB053007C5389 /* prtktUITests.swift */; };
 		B50436492C8AB053007C5389 /* prtktUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50436482C8AB053007C5389 /* prtktUITestsLaunchTests.swift */; };
-		C2433F472C8EBAC400E45C2B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2433F462C8EBAC400E45C2B /* SwiftUIView.swift */; };
 		CEA5A98F2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEA5A98E2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf */; };
 		CEA5A9952C91EE5B0007F8F7 /* MapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA5A9942C91EE5B0007F8F7 /* MapVM.swift */; };
 		CEA5A99B2C91EE820007F8F7 /* timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA5A99A2C91EE820007F8F7 /* timetable.swift */; };
 		CEA5A99D2C91EFD30007F8F7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA5A99C2C91EFD30007F8F7 /* MapView.swift */; };
+		CEA5A99F2C91F1480007F8F7 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA5A99E2C91F1480007F8F7 /* ScheduleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +49,11 @@
 		B50436422C8AB053007C5389 /* prtktUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = prtktUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50436462C8AB053007C5389 /* prtktUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prtktUITests.swift; sourceTree = "<group>"; };
 		B50436482C8AB053007C5389 /* prtktUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prtktUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C2433F462C8EBAC400E45C2B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		CEA5A98E2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TYPOGRAPH PRO Light.ttf"; path = "../../../../../Downloads/typograph-pro/TYPOGRAPH PRO Light.ttf"; sourceTree = "<group>"; };
 		CEA5A9942C91EE5B0007F8F7 /* MapVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVM.swift; path = ../../../../../../Downloads/MapVM.swift; sourceTree = "<group>"; };
 		CEA5A99A2C91EE820007F8F7 /* timetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetable.swift; sourceTree = "<group>"; };
 		CEA5A99C2C91EFD30007F8F7 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = ../../../../../../.Trash/MapView.swift; sourceTree = "<group>"; };
+		CEA5A99E2C91F1480007F8F7 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				CEA5A99C2C91EFD30007F8F7 /* MapView.swift */,
-				C2433F462C8EBAC400E45C2B /* SwiftUIView.swift */,
+				CEA5A99E2C91F1480007F8F7 /* ScheduleView.swift */,
 				B504362D2C8AB052007C5389 /* ContentView.swift */,
 			);
 			path = Views;
@@ -291,9 +291,9 @@
 			files = (
 				CEA5A99D2C91EFD30007F8F7 /* MapView.swift in Sources */,
 				B504362E2C8AB052007C5389 /* ContentView.swift in Sources */,
+				CEA5A99F2C91F1480007F8F7 /* ScheduleView.swift in Sources */,
 				B504362C2C8AB052007C5389 /* prtktApp.swift in Sources */,
 				CEA5A9952C91EE5B0007F8F7 /* MapVM.swift in Sources */,
-				C2433F472C8EBAC400E45C2B /* SwiftUIView.swift in Sources */,
 				CEA5A99B2C91EE820007F8F7 /* timetable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

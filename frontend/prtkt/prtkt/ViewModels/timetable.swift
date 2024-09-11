@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 struct Class {
     var name: String
@@ -26,3 +27,15 @@ struct TimeTable {
     var days: [String]
 }
 
+struct Rooms: Identifiable {
+    let id = UUID()
+    let name: String
+    let coordinates: [CLLocationCoordinate2D]
+    var detected = false
+}
+
+struct Exits: Identifiable {
+    let id = UUID()
+    let name: String
+    let coordinates: [CLLocationCoordinate2D]
+}
