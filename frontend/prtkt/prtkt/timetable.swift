@@ -7,3 +7,12 @@
 
 import Foundation
 
+struct timetable: Identifiable, Codable{
+    var id = UUID()
+    let days: [Days]
+}
+
+struct Days: Identifiable, Codable {
+    var id = UUID()
+
+}
