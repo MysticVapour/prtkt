@@ -6,29 +6,6 @@
 //
 import SwiftUI
 
-struct Class {
-    var name: String
-    var startTime = Date()
-    var location: String
-}
-
-struct TimeTable {
-    var timetable: [String: [Class]] = [
-        "Monday": [],
-        "Tuesday": [],
-        "Wednesday": [],
-        "Thursday": [],
-        "Friday": [],
-        "Saturday": [],
-        "Sunday": []
-    ]
-    var days: [String]
-    
-    init() {
-        self.days = Array(timetable.keys)
-    }
-}
-
 struct DayScheduleView: View {
     @Binding var isVisible: Bool
     @Binding var scheduleEntry: Class

@@ -14,9 +14,11 @@
 		B504363D2C8AB053007C5389 /* prtktTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504363C2C8AB053007C5389 /* prtktTests.swift */; };
 		B50436472C8AB053007C5389 /* prtktUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50436462C8AB053007C5389 /* prtktUITests.swift */; };
 		B50436492C8AB053007C5389 /* prtktUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50436482C8AB053007C5389 /* prtktUITestsLaunchTests.swift */; };
-		C2433F432C8C4EE500E45C2B /* timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2433F422C8C4EE500E45C2B /* timetable.swift */; };
 		C2433F472C8EBAC400E45C2B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2433F462C8EBAC400E45C2B /* SwiftUIView.swift */; };
-		C2433F4B2C901ED900E45C2B /* TimeTableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2433F4A2C901ED900E45C2B /* TimeTableUIView.swift */; };
+		CEA5A98F2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEA5A98E2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf */; };
+		CEA5A9952C91EE5B0007F8F7 /* MapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA5A9942C91EE5B0007F8F7 /* MapVM.swift */; };
+		CEA5A99B2C91EE820007F8F7 /* timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA5A99A2C91EE820007F8F7 /* timetable.swift */; };
+		CEA5A99D2C91EFD30007F8F7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA5A99C2C91EFD30007F8F7 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +49,11 @@
 		B50436422C8AB053007C5389 /* prtktUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = prtktUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50436462C8AB053007C5389 /* prtktUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prtktUITests.swift; sourceTree = "<group>"; };
 		B50436482C8AB053007C5389 /* prtktUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prtktUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C2433F422C8C4EE500E45C2B /* timetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetable.swift; sourceTree = "<group>"; };
 		C2433F462C8EBAC400E45C2B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
-		C2433F4A2C901ED900E45C2B /* TimeTableUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableUIView.swift; sourceTree = "<group>"; };
+		CEA5A98E2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TYPOGRAPH PRO Light.ttf"; path = "../../../../../Downloads/typograph-pro/TYPOGRAPH PRO Light.ttf"; sourceTree = "<group>"; };
+		CEA5A9942C91EE5B0007F8F7 /* MapVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVM.swift; path = ../../../../../../Downloads/MapVM.swift; sourceTree = "<group>"; };
+		CEA5A99A2C91EE820007F8F7 /* timetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetable.swift; sourceTree = "<group>"; };
+		CEA5A99C2C91EFD30007F8F7 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = ../../../../../../.Trash/MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				B504362B2C8AB052007C5389 /* prtktApp.swift */,
+				CEA5A98E2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf */,
+				CEA5A9932C91EBB60007F8F7 /* ViewModels */,
 				C2433F492C8EC8BF00E45C2B /* Views */,
 				B504362F2C8AB053007C5389 /* Assets.xcassets */,
 				B50436312C8AB053007C5389 /* Preview Content */,
-				C2433F422C8C4EE500E45C2B /* timetable.swift */,
 			);
 			path = prtkt;
 			sourceTree = "<group>";
@@ -137,11 +142,20 @@
 		C2433F492C8EC8BF00E45C2B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEA5A99C2C91EFD30007F8F7 /* MapView.swift */,
 				C2433F462C8EBAC400E45C2B /* SwiftUIView.swift */,
 				B504362D2C8AB052007C5389 /* ContentView.swift */,
-				C2433F4A2C901ED900E45C2B /* TimeTableUIView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CEA5A9932C91EBB60007F8F7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CEA5A99A2C91EE820007F8F7 /* timetable.swift */,
+				CEA5A9942C91EE5B0007F8F7 /* MapVM.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA5A98F2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf in Resources */,
 				B50436332C8AB053007C5389 /* Preview Assets.xcassets in Resources */,
 				B50436302C8AB053007C5389 /* Assets.xcassets in Resources */,
 			);
@@ -274,11 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA5A99D2C91EFD30007F8F7 /* MapView.swift in Sources */,
 				B504362E2C8AB052007C5389 /* ContentView.swift in Sources */,
 				B504362C2C8AB052007C5389 /* prtktApp.swift in Sources */,
-				C2433F4B2C901ED900E45C2B /* TimeTableUIView.swift in Sources */,
-				C2433F432C8C4EE500E45C2B /* timetable.swift in Sources */,
+				CEA5A9952C91EE5B0007F8F7 /* MapVM.swift in Sources */,
 				C2433F472C8EBAC400E45C2B /* SwiftUIView.swift in Sources */,
+				CEA5A99B2C91EE820007F8F7 /* timetable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
