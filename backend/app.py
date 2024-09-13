@@ -15,17 +15,24 @@ model = project.version(2).model
 gunDetected = False
 print("Roboflow Initialized")
 
-# Initialize the webcam
-cap = cv2.VideoCapture(1)
 
-cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
-cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
-cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG')) 
-
+# Function to process the image
 def readImage(pathName: str):
-    model.predict(pathName, confidence=40, overlap=30).json()
+    prediction = model.predict(pathName, confidence=40, overlap=30).json()
+    os.remove(pathName)
+    print(f"Deleted file: {pathName}")
+    return prediction
 
-def process_image(image_path, counter):
+
+# Initialize the webcam
+cap = cv2.VideoCapture(0)
+
+# cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
+# cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
+# cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*"MJPG"))
+
+
+def process_image(image_path):
     # Save the frame as an image file
     cv2.imwrite(image_path, frame)
     print(f"Image saved as {image_path}")
@@ -33,16 +40,12 @@ def process_image(image_path, counter):
     # Process the image using the custom function
     readImage(image_path)
 
-    # Delete the image after processing
-    os.remove(image_path)
-    print(f"Image {image_path} deleted")
 
 # Check if the webcam is opened correctly
 if not cap.isOpened():
     print("Error: Could not open webcam.")
     exit()
 
-counter = 0
 frame_counter = 0
 
 try:
@@ -55,19 +58,16 @@ try:
 
         if frame_counter % 2 == 0:
             # Display the resulting frame
-            cv2.imshow('Webcam Footage', frame)
+            cv2.imshow("Webcam Footage", frame)
 
             # Process image in a new thread
-            image_path = f"image_{counter}.jpg"
-            threading.Thread(target=process_image, args=(image_path, counter)).start()
-
-            # Increment the counter for the next image
-            counter += 1
+            image_path = "temp_image.jpg"
+            threading.Thread(target=process_image, args=(image_path,)).start()
 
         frame_counter += 1
 
         # Press 'q' to quit the webcam window
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        if cv2.waitKey(1) & 0xFF == ord("q"):
             break
 
 except KeyboardInterrupt:
@@ -80,8 +80,3 @@ finally:
 
 
 app = FastAPI()
-
-
-
-
-
