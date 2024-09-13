@@ -22,8 +22,8 @@ def readImage(pathName: str):
 # Initialize the webcam
 cap = cv2.VideoCapture(1)
 
-cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
-cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
 cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG')) 
 
 # Check if the webcam is opened correctly
@@ -50,8 +50,6 @@ try:
 
         frame_counter += 1
 
-        cv2.imshow('Webcam Footage', frame)
-
         # Press 'q' to quit the webcam window
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
@@ -67,9 +65,6 @@ try:
         # Delete the image after processing
         os.remove(image_path)
         print(f"Image {image_path} deleted")
-
-        # Wait for 1 second before capturing the next image
-        time.sleep(1)
 
         # Increment the counter for the next image
         counter += 1
