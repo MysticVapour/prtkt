@@ -54,6 +54,7 @@
 		CEA5A99A2C91EE820007F8F7 /* timetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetable.swift; sourceTree = "<group>"; };
 		CEA5A99C2C91EFD30007F8F7 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = ../../../../../../.Trash/MapView.swift; sourceTree = "<group>"; };
 		CEA5A99E2C91F1480007F8F7 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		CEA5A9A02C92A2060007F8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 		B504362A2C8AB052007C5389 /* prtkt */ = {
 			isa = PBXGroup;
 			children = (
+				CEA5A9A02C92A2060007F8F7 /* Info.plist */,
 				B504362B2C8AB052007C5389 /* prtktApp.swift */,
 				CEA5A98E2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf */,
 				CEA5A9932C91EBB60007F8F7 /* ViewModels */,
@@ -460,6 +462,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"prtkt/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = prtkt/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "$(MARKETING_VERSION)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -488,6 +492,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"prtkt/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = prtkt/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "$(MARKETING_VERSION)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

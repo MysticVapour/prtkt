@@ -17,7 +17,8 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                     Color(red: 0.7, green: 0.9, blue: 0.7)
+                Color.main.opacity(0.9)
+                
                     .ignoresSafeArea()
                 
                 Circle()
@@ -53,18 +54,14 @@ struct ContentView: View {
                     }
                     .foregroundColor(.white)
                     .frame(width: 300, height: 50)
-                    .background( Color(red: 0.8, green: 0.9, blue: 0.8 ))
+                    .background(Color.main)
                     .cornerRadius(10)
                     
-                    NavigationLink(
-                        destination: Text("You are logged in @\(username)"),
-                        isActive: $showingLoginScreen
-                    ) {
-                        EmptyView() // This is needed to satisfy the requirement of NavigationLink
-                    }
                 }
             }
             .navigationBarHidden(true)
+        }.navigationDestination(isPresented: $showingLoginScreen) {
+            ScheduleView()
         }
     }
 
