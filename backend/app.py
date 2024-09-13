@@ -22,9 +22,9 @@ class Student(BaseModel):
 def read_root(student: Student):
     return {"name": student.name, "isGunDetected": gunDetected ,"room": student.designation}
 
-@app.get("/gandu")
+'''@app.get("/gandu")
 def read_gandu():
-    return {1: "Tonya"}
+    return {1: "Tonya"} '''
 
 @app.post("/post_test")
 def read_post(person: Student):
