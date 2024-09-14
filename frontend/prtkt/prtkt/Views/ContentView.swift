@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.main.opacity(0.9)
+                Color.main.opacity(0.8)
                 
                     .ignoresSafeArea()
                 

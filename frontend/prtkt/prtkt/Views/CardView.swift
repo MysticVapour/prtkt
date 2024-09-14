@@ -60,12 +60,13 @@ struct CardView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "arrow.forward").foregroundStyle(.main)
-                            .imageScale(.medium).padding(.leading)
                         Text("Next Class: " + room)
                             .font(.custom("Extra", size: 24))
                             .foregroundStyle(.main)
                             .padding()
+
+                        Image(systemName: "arrow.forward").foregroundStyle(.main)
+                            .imageScale(.medium).padding(.trailing)
                         
                     }
                     .background(RoundedRectangle(cornerRadius: 30)).foregroundStyle(.white)

@@ -1,9 +1,3 @@
-//
-//  MapVM.swift
-//  prtkt
-//
-//  Created by Rushil Madhu on 9/14/24.
-//
 import Foundation
 import MapKit
 import CoreLocation
@@ -21,23 +15,32 @@ struct Location: Equatable {
 }
 
 class MapVM: ObservableObject {
-    @Published var shooter : ShooterStatus = ShooterStatus(room: "CMSC216", detected: false)
+    @Published var shooter: ShooterStatus = ShooterStatus(room: "CMSC216", detected: false)
     @Published var timer: Timer?
     @Published var userLocation: CLLocationCoordinate2D?
     var locationManager = LocationManager()
-
-    
-    let rooms = [Rooms(name: "102", coordinates: [CLLocationCoordinate2D(latitude: 37.23193, longitude: -80.42738), CLLocationCoordinate2D(latitude: 37.23184, longitude: -80.42727), CLLocationCoordinate2D(latitude: 37.23180, longitude: -80.42737), CLLocationCoordinate2D(latitude: 37.23187, longitude: -80.42745)])]
-    
-    let exits = [Exits(name: "Main", coordinates: [CLLocationCoordinate2D(latitude: 37.23193, longitude: -80.42738), CLLocationCoordinate2D(latitude: 37.23195, longitude: -80.42727), CLLocationCoordinate2D(latitude: 37.23196, longitude: -80.4274), CLLocationCoordinate2D(latitude: 37.23187, longitude: -80.42745)], highlighted: false)]
+    @Published var rooms: [Rooms] = [
+        Rooms(name: "102", coordinates: [
+            CLLocationCoordinate2D(latitude: 37.23193, longitude: -80.42738),
+            CLLocationCoordinate2D(latitude: 37.23184, longitude: -80.42727),
+            CLLocationCoordinate2D(latitude: 37.23180, longitude: -80.42737),
+            CLLocationCoordinate2D(latitude: 37.23187, longitude: -80.42745)],
+              detected: true)]
+    @Published var exits = [Exits(name: "Main", coordinates: [
+        CLLocationCoordinate2D(latitude: 37.23193, longitude: -80.42738),
+        CLLocationCoordinate2D(latitude: 37.23195, longitude: -80.42727),
+        CLLocationCoordinate2D(latitude: 37.23196, longitude: -80.4274),
+        CLLocationCoordinate2D(latitude: 37.23187, longitude: -80.42745)],
+                          highlighted: false)]
     
     func startPolling() {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             Task {
                 do {
-                    let shooter = try await self.sendRequestToBackend()
+                    let shooterStatus = try await self.sendRequestToBackend()
                     DispatchQueue.main.async {
-                        self.shooter = shooter
+                        self.shooter = shooterStatus
+                        self.updateRoomDetectionStatus(with: shooterStatus)
                     }
                 } catch {
                     print("Error: \(error)")
@@ -48,6 +51,16 @@ class MapVM: ObservableObject {
     
     func stopPolling() {
         timer?.invalidate()
+    }
+    
+    func updateRoomDetectionStatus(with status: ShooterStatus) {
+        if !status.detected {
+            // Look for the room that matches the shooter status's room name
+            if let index = rooms.firstIndex(where: { $0.name == status.room }) {
+                // Update the detected value of that room to true
+                rooms[index].detected = true
+            }
+        }
     }
     
     func sendRequestToBackend() async throws -> ShooterStatus {
@@ -72,7 +85,7 @@ class MapVM: ObservableObject {
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let manager = CLLocationManager()
-    @Published var location = Location(coordinate: nil)  // Use Location struct
+    @Published var location = Location(coordinate: nil)  
 
     override init() {
         super.init()

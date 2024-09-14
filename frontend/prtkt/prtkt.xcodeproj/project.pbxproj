@@ -25,6 +25,7 @@
 		CEB9688A2C957DA800DBFB66 /* Gunshot.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CEB968892C957DA800DBFB66 /* Gunshot.mlmodel */; };
 		CEB9688C2C957F6400DBFB66 /* AudioClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9688B2C957F6400DBFB66 /* AudioClassifier.swift */; };
 		CEB9688F2C95878200DBFB66 /* MapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9688E2C95878200DBFB66 /* MapVM.swift */; };
+		CEB968912C96068C00DBFB66 /* DayScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB968902C96068C00DBFB66 /* DayScheduleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		CEB968892C957DA800DBFB66 /* Gunshot.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Gunshot.mlmodel; path = ../../../../Gunshot.mlmodel; sourceTree = "<group>"; };
 		CEB9688B2C957F6400DBFB66 /* AudioClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClassifier.swift; sourceTree = "<group>"; };
 		CEB9688E2C95878200DBFB66 /* MapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVM.swift; sourceTree = "<group>"; };
+		CEB968902C96068C00DBFB66 /* DayScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayScheduleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				B504362D2C8AB052007C5389 /* ContentView.swift */,
+				CEB968902C96068C00DBFB66 /* DayScheduleView.swift */,
 				CEA5A99E2C91F1480007F8F7 /* ScheduleView.swift */,
 				CEA5A99C2C91EFD30007F8F7 /* MapView.swift */,
 				CEA5A9A12C94064B0007F8F7 /* CardView.swift */,
@@ -323,6 +326,7 @@
 				CEA5A99D2C91EFD30007F8F7 /* MapView.swift in Sources */,
 				B504362E2C8AB052007C5389 /* ContentView.swift in Sources */,
 				CEB968852C95067F00DBFB66 /* Models.swift in Sources */,
+				CEB968912C96068C00DBFB66 /* DayScheduleView.swift in Sources */,
 				CEA5A99F2C91F1480007F8F7 /* ScheduleView.swift in Sources */,
 				CEB9688F2C95878200DBFB66 /* MapVM.swift in Sources */,
 				B504362C2C8AB052007C5389 /* prtktApp.swift in Sources */,
