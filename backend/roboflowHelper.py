@@ -7,4 +7,6 @@ model = project.version(2).model
 
 # infer on a local image
 
-print(model.predict("backend/pistol1.jpeg", confidence=40, overlap=30).json())
+predictions = model.predict("backend/temp_image_46.jpg", confidence=40, overlap=30).json()
+print(predictions)
+
