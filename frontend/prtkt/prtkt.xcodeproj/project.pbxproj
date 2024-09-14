@@ -15,10 +15,16 @@
 		B50436472C8AB053007C5389 /* prtktUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50436462C8AB053007C5389 /* prtktUITests.swift */; };
 		B50436492C8AB053007C5389 /* prtktUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50436482C8AB053007C5389 /* prtktUITestsLaunchTests.swift */; };
 		CEA5A98F2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEA5A98E2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf */; };
-		CEA5A9952C91EE5B0007F8F7 /* MapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA5A9942C91EE5B0007F8F7 /* MapVM.swift */; };
 		CEA5A99B2C91EE820007F8F7 /* timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA5A99A2C91EE820007F8F7 /* timetable.swift */; };
 		CEA5A99D2C91EFD30007F8F7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA5A99C2C91EFD30007F8F7 /* MapView.swift */; };
 		CEA5A99F2C91F1480007F8F7 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA5A99E2C91F1480007F8F7 /* ScheduleView.swift */; };
+		CEA5A9A22C94064B0007F8F7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA5A9A12C94064B0007F8F7 /* CardView.swift */; };
+		CEA5A9A42C940EEB0007F8F7 /* Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEA5A9A32C940EEB0007F8F7 /* Bold.ttf */; };
+		CEA5A9A62C940F500007F8F7 /* Extra.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEA5A9A52C940F500007F8F7 /* Extra.ttf */; };
+		CEB968852C95067F00DBFB66 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB968842C95067F00DBFB66 /* Models.swift */; };
+		CEB9688A2C957DA800DBFB66 /* Gunshot.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CEB968892C957DA800DBFB66 /* Gunshot.mlmodel */; };
+		CEB9688C2C957F6400DBFB66 /* AudioClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9688B2C957F6400DBFB66 /* AudioClassifier.swift */; };
+		CEB9688F2C95878200DBFB66 /* MapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9688E2C95878200DBFB66 /* MapVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,11 +56,17 @@
 		B50436462C8AB053007C5389 /* prtktUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prtktUITests.swift; sourceTree = "<group>"; };
 		B50436482C8AB053007C5389 /* prtktUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prtktUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CEA5A98E2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TYPOGRAPH PRO Light.ttf"; path = "../../../../../Downloads/typograph-pro/TYPOGRAPH PRO Light.ttf"; sourceTree = "<group>"; };
-		CEA5A9942C91EE5B0007F8F7 /* MapVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVM.swift; path = ../../../../../../Downloads/MapVM.swift; sourceTree = "<group>"; };
 		CEA5A99A2C91EE820007F8F7 /* timetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetable.swift; sourceTree = "<group>"; };
-		CEA5A99C2C91EFD30007F8F7 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = ../../../../../../.Trash/MapView.swift; sourceTree = "<group>"; };
+		CEA5A99C2C91EFD30007F8F7 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = ../../../../../../.Trash/MapView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		CEA5A99E2C91F1480007F8F7 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		CEA5A9A02C92A2060007F8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CEA5A9A12C94064B0007F8F7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		CEA5A9A32C940EEB0007F8F7 /* Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bold.ttf; path = "../../../../../Downloads/typograph-pro/Bold.ttf"; sourceTree = "<group>"; };
+		CEA5A9A52C940F500007F8F7 /* Extra.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Extra.ttf; path = "../../../../../Downloads/typograph-pro/Extra.ttf"; sourceTree = "<group>"; };
+		CEB968842C95067F00DBFB66 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		CEB968892C957DA800DBFB66 /* Gunshot.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Gunshot.mlmodel; path = ../../../../Gunshot.mlmodel; sourceTree = "<group>"; };
+		CEB9688B2C957F6400DBFB66 /* AudioClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClassifier.swift; sourceTree = "<group>"; };
+		CEB9688E2C95878200DBFB66 /* MapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +119,14 @@
 			children = (
 				CEA5A9A02C92A2060007F8F7 /* Info.plist */,
 				B504362B2C8AB052007C5389 /* prtktApp.swift */,
-				CEA5A98E2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf */,
-				CEA5A9932C91EBB60007F8F7 /* ViewModels */,
+				CEB9688D2C95877400DBFB66 /* ViewModel */,
+				CEB968862C95720F00DBFB66 /* Models */,
 				C2433F492C8EC8BF00E45C2B /* Views */,
 				B504362F2C8AB053007C5389 /* Assets.xcassets */,
+				CEB968892C957DA800DBFB66 /* Gunshot.mlmodel */,
+				CEA5A9A52C940F500007F8F7 /* Extra.ttf */,
+				CEA5A9A32C940EEB0007F8F7 /* Bold.ttf */,
+				CEA5A98E2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf */,
 				B50436312C8AB053007C5389 /* Preview Content */,
 			);
 			path = prtkt;
@@ -144,20 +160,30 @@
 		C2433F492C8EC8BF00E45C2B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CEA5A99C2C91EFD30007F8F7 /* MapView.swift */,
-				CEA5A99E2C91F1480007F8F7 /* ScheduleView.swift */,
 				B504362D2C8AB052007C5389 /* ContentView.swift */,
+				CEA5A99E2C91F1480007F8F7 /* ScheduleView.swift */,
+				CEA5A99C2C91EFD30007F8F7 /* MapView.swift */,
+				CEA5A9A12C94064B0007F8F7 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		CEA5A9932C91EBB60007F8F7 /* ViewModels */ = {
+		CEB968862C95720F00DBFB66 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				CEA5A99A2C91EE820007F8F7 /* timetable.swift */,
-				CEA5A9942C91EE5B0007F8F7 /* MapVM.swift */,
+				CEB9688B2C957F6400DBFB66 /* AudioClassifier.swift */,
+				CEB968842C95067F00DBFB66 /* Models.swift */,
 			);
-			path = ViewModels;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEB9688D2C95877400DBFB66 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEB9688E2C95878200DBFB66 /* MapVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +291,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA5A98F2C91EB2C0007F8F7 /* TYPOGRAPH PRO Light.ttf in Resources */,
+				CEA5A9A62C940F500007F8F7 /* Extra.ttf in Resources */,
+				CEA5A9A42C940EEB0007F8F7 /* Bold.ttf in Resources */,
 				B50436332C8AB053007C5389 /* Preview Assets.xcassets in Resources */,
 				B50436302C8AB053007C5389 /* Assets.xcassets in Resources */,
 			);
@@ -291,11 +319,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA5A9A22C94064B0007F8F7 /* CardView.swift in Sources */,
 				CEA5A99D2C91EFD30007F8F7 /* MapView.swift in Sources */,
 				B504362E2C8AB052007C5389 /* ContentView.swift in Sources */,
+				CEB968852C95067F00DBFB66 /* Models.swift in Sources */,
 				CEA5A99F2C91F1480007F8F7 /* ScheduleView.swift in Sources */,
+				CEB9688F2C95878200DBFB66 /* MapVM.swift in Sources */,
 				B504362C2C8AB052007C5389 /* prtktApp.swift in Sources */,
-				CEA5A9952C91EE5B0007F8F7 /* MapVM.swift in Sources */,
+				CEB9688C2C957F6400DBFB66 /* AudioClassifier.swift in Sources */,
+				CEB9688A2C957DA800DBFB66 /* Gunshot.mlmodel in Sources */,
 				CEA5A99B2C91EE820007F8F7 /* timetable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,7 +495,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = prtkt/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "$(MARKETING_VERSION)";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = 1.0;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -493,7 +527,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = prtkt/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "$(MARKETING_VERSION)";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = 1.0;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

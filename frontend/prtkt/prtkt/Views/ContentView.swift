@@ -34,30 +34,39 @@ struct ContentView: View {
                         .font(.largeTitle)
                         .bold()
                         .padding()
+                        .foregroundStyle(.black)
                     
                     TextField("Username", text: $username)
                         .padding()
                         .frame(width: 300, height: 50)
-                        .background(Color.black.opacity(0.05))
+                        .background(Color.black.opacity(0.3))
                         .cornerRadius(10)
                         .border(Color.red, width: CGFloat(wrongUsername))
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled(true)
+                        .foregroundStyle(.black)
                     
                     SecureField("Password", text: $password)
                         .padding()
                         .frame(width: 300, height: 50)
-                        .background(Color.black.opacity(0.05))
+                        .background(Color.black.opacity(0.3))
                         .cornerRadius(10)
                         .border(Color.red, width: CGFloat(wrongPassword))
                     
-                    Button("Login") {
+                    Button(action: {
                         authenticateUser(username: username, password: password)
-                    }
-                    .foregroundColor(.white)
-                    .frame(width: 300, height: 50)
-                    .background(Color.main)
-                    .cornerRadius(10)
+                    }, label: {
+                        Text("Login")
+                            .foregroundColor(.white)
+                            .frame(width: 200, height: 50)
+                            .background(Color.main)
+                            .cornerRadius(10)
+                    })
+                    .padding()
+                    
                     
                 }
+                .padding()
             }
             .navigationBarHidden(true)
         }.navigationDestination(isPresented: $showingLoginScreen) {

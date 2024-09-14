@@ -1,101 +1,103 @@
 import SwiftUI
 
 struct DayScheduleView: View {
-    @Binding var scheduleEntries: [Class]
+    @Binding var classes: [Class]
     var dayName: String
-
+    var defaultRoom: Rooms
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Text(dayName)
-                    .frame(width: 100, height: 30)
-                    .background(Color.white)
-                    .cornerRadius(20)
+                    .font(.headline)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(10)
+                
+                Spacer()
                 
                 Button(action: {
-                    // Add a new class entry for the day
-                    scheduleEntries.append(Class(name: "", startTime: Date(), location: ""))
+                    classes.append(Class(name: "", startTime: Date(), endTime: Date(), room: defaultRoom))
                 }) {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
                         .frame(width: 25, height: 25)
-                        .foregroundColor(.black)
+                        .foregroundColor(.blue)
                 }
             }
-
-            ForEach($scheduleEntries.indices, id: \.self) { index in
-                withAnimation {
-                    HStack {
-                        TextField("Class Name", text: $scheduleEntries[index].name)
-                            .padding()
-                            .font(.custom("TYPOGRAPH PRO Light", size: 32))
-                            .frame(width: 200, height: 50)
-                            .background(Color(red: 0.8, green: 0.9, blue: 0.8))
-                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 2))
-
-                        DatePicker("Enter Time", selection: $scheduleEntries[index].startTime, displayedComponents: .hourAndMinute)
-                            .font(.custom("TYPOGRAPH PRO Light", size: 10))
-                            .labelsHidden()
-                            .frame(width: 100, height: 50)
-                            .background(Color(red: 0.8, green: 0.9, blue: 0.8))
-                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 2))
-                        
-                        // Remove button
-                        Button(action: {
-                            scheduleEntries.remove(at: index)
-                        }) {
-                            Image(systemName: "minus.circle.fill")
-                                .resizable()
-                                .frame(width: 25, height: 25)
-                                .foregroundColor(.black)
-                        }
-                    }
-                }
-                
-            }.transition(.asymmetric(insertion: .move(edge: .top).combined(with: .opacity),
-                                     removal: .move(edge: .bottom).combined(with: .opacity)))
-            .animation(.easeInOut(duration: 0.5), value: scheduleEntries.count)
-
+            
+            ForEach(classes) { classs in
+//                HStack {
+//                    TextField("Class Name", text: $classs.name)
+//                        .textFieldStyle(RoundedBorderTextFieldStyle())
+//                        .frame(width: 100)
+//                    
+//                    DatePicker("", selection: $classs.startTime, displayedComponents: .hourAndMinute)
+//                        .labelsHidden()
+//                    
+//                    DatePicker("", selection: $classs.endTime, displayedComponents: .hourAndMinute)
+//                        .labelsHidden()
+//                    
+//                    TextField("Room", text: $classs.room.name)
+//                        .textFieldStyle(RoundedBorderTextFieldStyle())
+//                        .frame(width: 80)
+//                    
+//                    Button(action: {
+//                        if let index = classes.firstIndex(where: { $0.id == classes.id }) {
+//                            classes.remove(at: index)
+//                        }
+//                    }) {
+//                        Image(systemName: "minus.circle.fill")
+//                            .resizable()
+//                            .frame(width: 20, height: 20)
+//                            .foregroundColor(.red)
+//                    }
+//                }
+            }
         }
+        .padding()
+        .background(Color.white.opacity(0.9))
+        .cornerRadius(10)
+        .shadow(radius: 5)
+        .padding(.bottom)
     }
 }
 
 struct ScheduleView: View {
-    // Use arrays of Class for each day
-    @State private var mondayEntries = [Class]()
-    @State private var tuesdayEntries = [Class]()
-    @State private var wednesdayEntries = [Class]()
-    @State private var thursdayEntries = [Class]()
-    @State private var fridayEntries = [Class]()
-
+    @State private var timetable = Timetable()
+    let defaultRoom = Rooms(name: "Unknown", coordinates: [])
+    
     var body: some View {
-        ZStack {
-            Circle()
-                .scale(100)
-                .fill(Color.main.opacity(0.9) )
-                .frame(width: 40, height: 10)
-                .offset(x: 25, y: -25)
-            
-            Circle()
-                .scale(30)
-                .foregroundColor(.white.opacity(0.25))
-                .frame(width: 40, height: 20)
-                .offset(x: 25, y: -25)
-        }
-        VStack {
-            Text("Enter your schedule")
-                .foregroundColor(Color.black)
-                .font(.largeTitle)
-                .bold()
+        NavigationView {
+            ScrollView {
+                VStack {
+                    Text("Enter Your Schedule")
+                        .font(.largeTitle)
+                        .bold()
+                        .padding()
+                    
+//                    ForEach(Weekday.allCases) { day in
+//                        DayScheduleView(classes: Binding(
+//                            get: { timetable.schedule[day] ?? [] },
+//                            set: { timetable.schedule[day] = $0 }
+//                        ), dayName: day.displayName, defaultRoom: defaultRoom)
+//                    }
+                    
+                    // Navigation button to MapView
+//                    NavigationLink(destination: MapView(timetable: timetable)) {
+//                        Text("Go to Map")
+//                            .font(.headline)
+//                            .padding()
+//                            .background(Color.blue)
+//                            .foregroundColor(.white)
+//                            .cornerRadius(10)
+//                    }
+//                    .padding()
+                }
                 .padding()
-            
-            DayScheduleView(scheduleEntries: $mondayEntries, dayName: "Monday")
-            DayScheduleView(scheduleEntries: $tuesdayEntries, dayName: "Tuesday")
-            DayScheduleView(scheduleEntries: $wednesdayEntries, dayName: "Wednesday")
-            DayScheduleView(scheduleEntries: $thursdayEntries, dayName: "Thursday")
-            DayScheduleView(scheduleEntries: $fridayEntries, dayName: "Friday")
+            }
+            .navigationBarTitle("Schedule", displayMode: .inline)
         }
-        .padding()
     }
 }
 
